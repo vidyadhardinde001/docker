@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vidyadhar-deployment
+  labels:
+    app: vidyadhar
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vidyadhar
+  template:
+    metadata:
+      labels:
+        app: vidyadhar
+    spec:
+      containers:
+      - name: nginx
+        image: docker
+        ports:
+        - containerPort: 80
