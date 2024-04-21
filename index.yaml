@@ -15,7 +15,7 @@ spec:
         app: vidyadhar
     spec:
       containers:
-      - name: nginx
+      - name: nginx:2.0
         image: docker
         ports:
         - containerPort: 80
